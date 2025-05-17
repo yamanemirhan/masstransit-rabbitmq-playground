@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-EmailService.Worker-e660e965-02d6-47a9-993e-a904e1da1b57</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+	  <PackageReference Include="MassTransit" Version="8.4.0" />
+	  <PackageReference Include="MassTransit.RabbitMQ" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OrderService\OrderService.Domain\OrderService.Domain.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared.Contracts\Shared.Contracts.csproj" />
+  </ItemGroup>
+</Project>
